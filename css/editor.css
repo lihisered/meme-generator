@@ -51,8 +51,9 @@
 }
 
 .main-btns .fas:active {
-    transform: scale(0.9);
-    transition: 0.1s;
+    border: 1px solid white;
+    /* transform: scale(0.9); */
+    /* transition: 0.1s; */
 }
 
 .main-btns .fa-trash {
@@ -112,4 +113,36 @@
 
 .txt-btns .decrease::after {
     content: '-';
+}
+
+.save-btn,
+.share-btn {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 1.25rem;
+    font-family: poppins medium;
+    border: none;
+    border-radius: 10px;
+}
+
+.share-btn {
+    background-color: #1e7cd3;
+    box-shadow: 2px 2px 0 #125492;
+}
+
+.share-btn::after {
+    content: 'Share';
+    padding-left: 15px;
+}
+
+.save-btn {
+    background-color: #8f44bb;
+    box-shadow: 2px 2px 0 #662e86;
+}
+
+.save-btn::after {
+    content: 'Download';
+    padding-left: 15px;
 }

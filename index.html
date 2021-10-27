@@ -59,7 +59,7 @@
                     <button onclick="onMoveTxt(130)" class="move-btn"><i class="fas fa-align-center"></i></button>
                     <button onclick="onMoveTxt(250)" class="move-btn"><i class="fas fa-align-right"></i></button>
 
-                    <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
+                    <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" class="font-input" />
                     <datalist id="fonts">
                         <option value="Arial"></option>
                         <option value="Impact"></option>
@@ -69,7 +69,12 @@
                     <input oninput="onChangeTxtFill(this)" type="color" class="stroke" value="#ffffff" />
                     <input oninput="onChangeStroke(this)" type="color" class="fill" />
                 </div>
-                <button><a href="#" download="meme.jpg" onclick="downloadImg(this)">Download</a></button>
+                <div>
+                    <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                    <button class="save-btn">
+                        <a href="#" download="meme.jpg" onclick="downloadImg(this)"><i class="fas fa-download"></i></a>
+                    </button>
+                </div>
             </div>
         </div>
 

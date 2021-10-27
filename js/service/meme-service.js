@@ -88,17 +88,6 @@ function moveTxt(width) {
     saveMemeToStorage();
 }
 
-function moveLeft() {
-    gMeme.lines[gMeme.selectedLineIdx].pos.x = 10;
-    saveMemeToStorage();
-}
-
-function moveRight() {
-    // FIX!
-    gMeme.lines[gMeme.selectedLineIdx].pos.x = 250;
-    saveMemeToStorage();
-}
-function moveMiddle() {}
 function changeFont(font) {
     gMeme.lines[gMeme.selectedLineIdx].font = font;
     saveMemeToStorage();

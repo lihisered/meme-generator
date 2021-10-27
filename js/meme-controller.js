@@ -25,7 +25,8 @@ function initCanvas() {
 }
 
 function renderCanvas() {
-    var meme = getMeme();
+    // var meme = getMeme();
+    var meme = gMeme;
     drawImg(meme.selectedImgId);
 }
 
@@ -39,7 +40,8 @@ function drawText(text, font = 'Impact', size, color, stroke, x, y) {
 }
 
 function drawImg(imgId) {
-    var meme = getMeme();
+    // var meme = getMeme();
+    var meme = gMeme;
     var img = new Image();
     img.src = `img/${imgId}.jpg`;
     img.onload = () => {
