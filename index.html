@@ -29,11 +29,7 @@
                 <canvas class="canvas" height="450" width="450"></canvas>
             </div>
             <div class="meme-editor">
-                <input
-                    oninput="onChangeTxt(event)"
-                    type="text"
-                    placeholder="Enter text here"
-                />
+                <input oninput="onChangeTxt(event)" type="text" class="txt-input" placeholder="Enter text here" />
                 <div class="main-btns">
                     <button onclick="onSwitchLine()">Switch line</button>
                     <button onclick="onAddLine()">Add line</button>
@@ -45,12 +41,7 @@
                     <button onclick="onChangePos(-10)">Move up</button>
                     <button onclick="onChangePos(10)">Move down</button>
 
-                    <input
-                        oninput="onChangeFont(event)"
-                        list="fonts"
-                        type="text"
-                        placeholder="Font"
-                    />
+                    <input oninput="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
                     <datalist id="fonts">
                         <option value="Arial"></option>
                         <option value="Impact"></option>
@@ -61,18 +52,12 @@
                     <button>Middle</button>
                     <button onclick="onMoveRight()">Move right</button>
 
-                    <input
-                        oninput="onChangeTxtFill(this)"
-                        type="color"
-                        class="stroke"
-                        value="#ffffff"
-                    />
-                    <input
-                        oninput="onChangeStroke(this)"
-                        type="color"
-                        class="fill"
-                    />
+                    <input oninput="onChangeTxtFill(this)" type="color" class="stroke" value="#ffffff" />
+                    <input oninput="onChangeStroke(this)" type="color" class="fill" />
                 </div>
+                <button>
+                    <a href="#" download="meme.jpg" onclick="downloadImg(this)">Download</a>
+                </button>
             </div>
         </div>
 

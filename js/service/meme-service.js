@@ -4,7 +4,7 @@ console.log('Meme service');
 const KEY = 'memeDB';
 var gMeme;
 
-function createMeme(imgId) {
+function createMeme(imgId, font = 'Impact') {
     var meme = {
         selectedImgId: imgId,
         selectedLineIdx: 0,
@@ -12,7 +12,7 @@ function createMeme(imgId) {
             {
                 txt: 'Enter text here',
                 size: 30,
-                font: 'Impact',
+                font,
                 align: 'left',
                 color: 'white',
                 stroke: 'black',
@@ -39,15 +39,14 @@ function changePos(diff) {
     saveMemeToStorage();
 }
 
-function addLine() {
+function addLine(font = 'Impact') {
     var line = {
-        txt: 'Enter text here',
+        txt: '',
         size: 30,
-        font: 'Impact',
+        font,
         align: 'left',
         color: 'white',
         stroke: 'black',
-
         pos: { x: 140, y: 100 },
     };
     gMeme.lines.push(line);
@@ -58,12 +57,17 @@ function addLine() {
 function switchLine() {
     if (gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
     else gMeme.selectedLineIdx = 0;
+
+    var elInput = document.querySelector('.txt-input');
+    if (gMeme.lines.length > 1) elInput.value = gMeme.lines[gMeme.selectedLineIdx].txt;
+    else elInput.value = '';
+
     saveMemeToStorage();
 }
 
 function removeLine() {
+    if (gMeme.lines.length === 1) gMeme.selectedLineIdx = 0;
     gMeme.lines.splice(gMeme.selectedLineIdx, 1);
-    switchLine();
     saveMemeToStorage();
 }
 
