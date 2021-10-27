@@ -1,0 +1,16 @@
+.gallery-container {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-container img {
+    height: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.gallery-container img:hover {
+    cursor: pointer;
+    background-color: white;
+}

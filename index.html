@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Meme Maker</title>
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/gallery.css" />
     </head>
-    <body>
+    <body onload="onInit()">
         <header>
             <div class="main-header">
                 <div class="logo">Logo</div>
@@ -22,9 +23,9 @@
             <div class="gallery-container"></div>
         </main>
 
-        <section class="editor-container">
+        <section class="editor-container" hidden>
             <div class="canvas-container">
-                <canvas class="canvas"></canvas>
+                <canvas class="canvas" height="450" width="450"></canvas>
             </div>
         </section>
 
