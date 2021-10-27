@@ -68,3 +68,12 @@ function onChangePos(diff) {
     changePos(diff);
     renderCanvas();
 }
+
+function onAddLine() {
+    addLine();
+    renderCanvas();
+}
+
+function onSwitchLine() {
+    switchLine();
+}

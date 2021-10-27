@@ -37,6 +37,25 @@ function changePos(diff) {
     saveMemeToStorage();
 }
 
+function addLine() {
+    var line = {
+        txt: 'Enter text here',
+        size: 30,
+        align: 'left',
+        color: 'red',
+        pos: { x: 140, y: 100 },
+    };
+    gMeme.lines.push(line);
+    switchLine();
+    saveMemeToStorage();
+}
+
+function switchLine() {
+    if (gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
+    else gMeme.selectedLineIdx = 0;
+    saveMemeToStorage();
+}
+
 function getMeme() {
     return loadFromStorage(KEY);
 }
