@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meme Maker</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header>
+            <div class="main-header">
+                <div class="logo">Logo</div>
+                <!-- <ul class="main-nav">
+                    <li>Gallery</li>
+                    <li>Memes</li>
+                </ul> -->
+            </div>
+        </header>
+
+        <main>
+            <div class="gallery-container"></div>
+        </main>
+
+        <section class="editor-container">
+            <div class="canvas-container">
+                <canvas class="canvas"></canvas>
+            </div>
+        </section>
+
+        <script src="js/utils.js"></script>
+        <script src="js/service/storage.js"></script>
+
+        <script src="js/service/gallery-service.js"></script>
+        <script src="js/gallery-controller.js"></script>
+
+        <script src="js/service/meme-service.js"></script>
+        <script src="js/meme-controller.js"></script>
+    </body>
+</html>
