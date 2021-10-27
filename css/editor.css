@@ -6,26 +6,72 @@
 }
 
 .canvas {
-    background-color: white;
+    border-radius: 20px;
 }
 
 .meme-editor {
     height: 450px;
     width: 450px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    background-color: #383b42;
 }
 
 .meme-editor > * {
     text-align: center;
-    padding: 10px;
+}
+
+.meme-editor .txt-input {
+    margin: 20px 35px;
+    color: #3d3d3d;
+    font-size: 1.555rem;
+    font-family: poppins medium;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 #bac3d1;
+    background-color: #ebeef3;
+    outline: none;
+}
+
+.meme-editor .txt-input:focus {
+    border: none;
 }
 
 .meme-editor .main-btns > * {
-    margin: 10px;
+    background-color: transparent;
+    border: none;
 }
 
 .meme-editor .txt-btns > * {
     margin: 10px;
+}
+
+.main-btns .fas {
+    font-size: 25px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #ebeef3;
+}
+
+.main-btns .fas:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+}
+
+.main-btns .fa-trash {
+    background-color: #e43d36;
+    box-shadow: 2px 2px 0 #b62f2a;
+}
+
+.main-btns .fa-plus {
+    background-color: #39be4e;
+    box-shadow: 2px 2px 0 #2e9e3f;
+}
+
+.main-btns .fa-exchange-alt {
+    transform: rotate(90deg);
+    background-color: #48b5d1;
+    box-shadow: 2px -2px 0 #328397;
+    padding: 12px 10px;
 }

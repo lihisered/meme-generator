@@ -25,6 +25,7 @@
         <main>
             <div class="gallery-container">
                 <input class="search-input" type="text" placeholder="Search" />
+                <!-- <i class="fas fa-search"></i> -->
                 <div class="filter-imgs">
                     <span>Funny</span>
                     <span>Animal</span>
@@ -45,9 +46,9 @@
             <div class="meme-editor">
                 <input oninput="onChangeTxt(event)" type="text" class="txt-input" placeholder="Enter text here" />
                 <div class="main-btns">
-                    <button onclick="onSwitchLine()">Switch line</button>
-                    <button onclick="onAddLine()">Add line</button>
-                    <button onclick="onRemoveLine()">Delete line</button>
+                    <button onclick="onSwitchLine()"><i class="fas fa-exchange-alt"></i></button>
+                    <button onclick="onAddLine()"><i class="fas fa-plus"></i></button>
+                    <button onclick="onRemoveLine()"><i class="fas fa-trash"></i></button>
                 </div>
                 <div class="txt-btns">
                     <button onclick="onChangeSize(1)">Increase</button>
@@ -74,6 +75,8 @@
                 </button>
             </div>
         </div>
+
+        <script src="https://kit.fontawesome.com/dccbba1e6d.js" crossorigin="anonymous"></script>
 
         <script src="js/utils.js"></script>
         <script src="js/service/storage.js"></script>
