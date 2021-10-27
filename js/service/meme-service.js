@@ -43,8 +43,11 @@ function addLine() {
     var line = {
         txt: 'Enter text here',
         size: 30,
+        font: 'Impact',
         align: 'left',
-        color: 'red',
+        color: 'white',
+        stroke: 'black',
+
         pos: { x: 140, y: 100 },
     };
     gMeme.lines.push(line);
