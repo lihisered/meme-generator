@@ -14,7 +14,6 @@ function onCreateMeme(imgId) {
 
     var elContainer = document.querySelector('.editor-container');
     elContainer.style.display = 'flex';
-    // elContainer.classList.add('flex');
 
     renderCanvas();
     addListeners();

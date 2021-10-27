@@ -5,15 +5,20 @@
 /* TYPOGRAPHY */
 
 @font-face {
-    font-family: poppins;
+    font-family: poppins medium;
     src: url(../font/poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: poppins light;
+    src: url(../font/poppins/Poppins-Light.ttf);
 }
 
 /* BASIC */
 
 body {
     background-color: #22252c;
-    font-family: poppins;
+    font-family: poppins medium;
 }
 
 .header-conatiner {

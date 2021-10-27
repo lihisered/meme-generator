@@ -1,10 +1,27 @@
 .gallery-container {
     margin: auto;
-    text-align: center;
-    /* padding: 20px; */
+    background-color: #383b42;
+    border-radius: 10px;
 }
 
-.gallery-container img {
+.search-input {
+    margin: 20px;
+    width: 500px;
+    color: #fefefe;
+    background-color: #22252c;
+    font-size: 1.312rem;
+    font-family: poppins light;
+    border: none;
+    height: 55px;
+    border-radius: 40px;
+    padding-left: 40px;
+}
+
+.imgs-container {
+    text-align: center;
+}
+
+.imgs-container img {
     height: 170px;
     padding: 5px;
     border-radius: 10px;
@@ -12,5 +29,4 @@
 
 .gallery-container img:hover {
     cursor: pointer;
-    background-color: white;
 }
