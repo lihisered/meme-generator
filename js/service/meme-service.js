@@ -14,6 +14,7 @@ function createMeme(imgId) {
                 size: 30,
                 align: 'left',
                 color: 'white',
+                stroke: 'black',
                 pos: { x: 140, y: 400 },
             },
         ],
@@ -64,6 +65,11 @@ function removeLine() {
 
 function changeTxtFill(color) {
     gMeme.lines[gMeme.selectedLineIdx].color = color;
+    saveMemeToStorage();
+}
+
+function changeStroke(color) {
+    gMeme.lines[gMeme.selectedLineIdx].stroke = color;
     saveMemeToStorage();
 }
 
