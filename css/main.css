@@ -21,6 +21,10 @@ body {
     font-family: poppins medium;
 }
 
+button {
+    cursor: pointer;
+}
+
 .header-conatiner {
     padding-right: 200px;
     padding-left: 80px;
@@ -35,10 +39,9 @@ body {
     color: white;
 }
 
-.main-header .logo {
-    height: 70px;
-    font-size: 25px;
-    line-height: 70px;
+.main-header .logo img {
+    height: 40px;
+    margin-top: 13px;
 }
 
 .main-header .main-nav {

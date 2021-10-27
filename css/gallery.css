@@ -6,7 +6,7 @@
 
 .search-input {
     margin: 20px;
-    width: 500px;
+    width: 550px;
     color: #fefefe;
     background-color: #22252c;
     font-size: 1.312rem;
@@ -17,8 +17,32 @@
     padding-left: 40px;
 }
 
+.filter-imgs {
+    display: inline-block;
+    width: 550px;
+    padding: 13px;
+    border-radius: 40px;
+    background-color: #87898d;
+}
+
+.filter-imgs > * {
+    color: #fefefe;
+    font-family: poppins light;
+}
+
+.gallery-container button {
+    color: #fefefe;
+    font-size: 1.125em;
+    font-family: poppins light;
+    background: linear-gradient(to right, #0f9bb2 0%, #30bb72 100%);
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+}
+
 .imgs-container {
     text-align: center;
+    padding: 10px 50px;
 }
 
 .imgs-container img {
