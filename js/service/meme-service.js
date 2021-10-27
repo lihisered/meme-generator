@@ -16,7 +16,7 @@ function createMeme(imgId, font = 'Impact') {
                 align: 'left',
                 color: 'white',
                 stroke: 'black',
-                pos: { x: 140, y: 400 },
+                pos: { x: 130, y: 400 },
             },
         ],
     };
@@ -47,7 +47,7 @@ function addLine(font = 'Impact') {
         align: 'left',
         color: 'white',
         stroke: 'black',
-        pos: { x: 140, y: 100 },
+        pos: { x: 130, y: 100 },
     };
     gMeme.lines.push(line);
     switchLine();
@@ -83,6 +83,11 @@ function changeStroke(color) {
     saveMemeToStorage();
 }
 
+function moveTxt(width) {
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = width;
+    saveMemeToStorage();
+}
+
 function moveLeft() {
     gMeme.lines[gMeme.selectedLineIdx].pos.x = 10;
     saveMemeToStorage();
@@ -93,10 +98,21 @@ function moveRight() {
     gMeme.lines[gMeme.selectedLineIdx].pos.x = 250;
     saveMemeToStorage();
 }
-
+function moveMiddle() {}
 function changeFont(font) {
     gMeme.lines[gMeme.selectedLineIdx].font = font;
     saveMemeToStorage();
+}
+
+function setTxtDrag(isDrag) {
+    gMeme.isDrag = isDrag;
+    saveMemeToStorage();
+}
+
+function moveMeme(dx, dy) {
+    gMeme.lines[gMeme.selectedLineIdx].pos.x += dx;
+    gMeme.lines[gMeme.selectedLineIdx].pos.y += dy;
+    saveToStorage(KEY, gMeme);
 }
 
 function getMeme() {
