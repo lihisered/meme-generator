@@ -73,6 +73,17 @@ function changeStroke(color) {
     saveMemeToStorage();
 }
 
+function moveLeft() {
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = 10;
+    saveMemeToStorage();
+}
+
+function moveRight() {
+    // FIX!
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = 250;
+    saveMemeToStorage();
+}
+
 function getMeme() {
     return loadFromStorage(KEY);
 }

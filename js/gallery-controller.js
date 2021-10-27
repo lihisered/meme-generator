@@ -7,8 +7,6 @@ function onInit() {
 }
 
 function renderGallery() {
-    console.log('Rendering imgs...');
-
     var imgs = getImgs();
     console.log(imgs);
 

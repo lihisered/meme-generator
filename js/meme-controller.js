@@ -96,3 +96,13 @@ function onChangeStroke(elInput) {
     changeStroke(strokeColor);
     renderCanvas();
 }
+
+function onMoveLeft() {
+    moveLeft();
+    renderCanvas();
+}
+
+function onMoveRight() {
+    moveRight();
+    renderCanvas();
+}
