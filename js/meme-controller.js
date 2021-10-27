@@ -59,3 +59,10 @@ function onChangeTxt(ev) {
     changeTxt(txt);
     renderCanvas();
 }
+
+function onChangeSize(diff) {
+    console.log(diff);
+
+    changeSize(diff);
+    renderCanvas();
+}

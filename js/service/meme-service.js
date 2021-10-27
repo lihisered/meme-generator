@@ -27,6 +27,11 @@ function changeTxt(txt) {
     saveMemeToStorage();
 }
 
+function changeSize(diff) {
+    gMeme.lines[gMeme.selectedLineIdx].size += diff;
+    saveMemeToStorage();
+}
+
 function getMeme() {
     return loadFromStorage(KEY);
 }
