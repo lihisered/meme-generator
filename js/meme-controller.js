@@ -77,3 +77,8 @@ function onAddLine() {
 function onSwitchLine() {
     switchLine();
 }
+
+function onRemoveLine() {
+    removeLine();
+    renderCanvas();
+}

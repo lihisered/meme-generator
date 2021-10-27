@@ -56,6 +56,12 @@ function switchLine() {
     saveMemeToStorage();
 }
 
+function removeLine() {
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1);
+    switchLine();
+    saveMemeToStorage();
+}
+
 function getMeme() {
     return loadFromStorage(KEY);
 }
