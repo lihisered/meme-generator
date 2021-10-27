@@ -8,7 +8,10 @@ function onCreateMeme(imgId) {
     createMeme(imgId);
 
     document.querySelector('.gallery-container').hidden = true;
-    document.querySelector('.editor-container').hidden = false;
+
+    var elContainer = document.querySelector('.editor-container');
+    elContainer.hidden = false;
+    elContainer.classList.add('flex');
 
     initCanvas();
     renderCanvas();

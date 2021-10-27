@@ -24,7 +24,7 @@
             <div class="gallery-container"></div>
         </main>
 
-        <section class="editor-container" hidden>
+        <div class="editor-container" hidden>
             <div class="canvas-container">
                 <canvas class="canvas" height="450" width="450"></canvas>
             </div>
@@ -34,13 +34,19 @@
                     type="text"
                     placeholder="Enter text here"
                 />
-                <div class="main-buttons">
+                <div class="main-btns">
                     <button>Switch line</button>
                     <button>Add line</button>
                     <button>Delete line</button>
                 </div>
+                <div class="txt-btns">
+                    <button>Increase</button>
+                    <button>Decrease</button>
+                    <button>Move up</button>
+                    <button>Move down</button>
+                </div>
             </div>
-        </section>
+        </div>
 
         <script src="js/utils.js"></script>
         <script src="js/service/storage.js"></script>
