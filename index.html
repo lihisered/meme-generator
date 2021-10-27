@@ -28,6 +28,18 @@
             <div class="canvas-container">
                 <canvas class="canvas" height="450" width="450"></canvas>
             </div>
+            <div class="meme-editor">
+                <input
+                    oninput="onChangeTxt(event)"
+                    type="text"
+                    placeholder="Enter text here"
+                />
+                <div class="main-buttons">
+                    <button>Switch line</button>
+                    <button>Add line</button>
+                    <button>Delete line</button>
+                </div>
+            </div>
         </section>
 
         <script src="js/utils.js"></script>

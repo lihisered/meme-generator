@@ -21,8 +21,6 @@ function initCanvas() {
 
 function renderCanvas() {
     var meme = getMeme();
-    console.log(meme);
-
     drawImg(meme.selectedImgId);
 }
 
@@ -50,4 +48,11 @@ function drawImg(imgId) {
             drawText(txt, size, x, y);
         });
     };
+}
+
+function onChangeTxt(ev) {
+    var txt = ev.target.value;
+
+    changeTxt(txt);
+    renderCanvas();
 }

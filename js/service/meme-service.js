@@ -14,11 +14,16 @@ function createMeme(imgId) {
                 size: 30,
                 align: 'left',
                 color: 'red',
-                pos: { x: 160, y: 400 },
+                pos: { x: 140, y: 400 },
             },
         ],
     };
     gMeme = meme;
+    saveMemeToStorage();
+}
+
+function changeTxt(txt) {
+    gMeme.lines[gMeme.selectedLineIdx].txt = txt;
     saveMemeToStorage();
 }
 
