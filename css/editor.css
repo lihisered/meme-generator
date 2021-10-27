@@ -86,8 +86,30 @@
 }
 
 .txt-btns {
-    padding: 10px;
     margin: 20px 35px;
     border-radius: 10px;
     background-color: #19a59f;
+}
+
+.txt-btns > * {
+    border: none;
+    margin: 10px;
+    background-color: white;
+}
+.txt-btns .increase,
+.txt-btns .decrease,
+.txt-btns .move-btn {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 #dbdbdb;
+}
+
+.txt-btns .increase::after {
+    content: '+';
+}
+
+.txt-btns .decrease::after {
+    content: '-';
 }

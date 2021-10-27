@@ -53,8 +53,11 @@
                     <button onclick="onRemoveLine()"><i class="fas fa-trash"></i></button>
                 </div>
                 <div class="txt-btns">
-                    <button onclick="onChangeSize(1)">Increase</button>
-                    <button onclick="onChangeSize(-1)">Decrease</button>
+                    <button onclick="onChangeSize(1)" class="increase"><i class="fas fa-font"></i></button>
+                    <button onclick="onChangeSize(-1)" class="decrease"><i class="fas fa-font"></i></button>
+                    <button onclick="onMoveTxt(10)" class="move-btn"><i class="fas fa-align-left"></i></button>
+                    <button onclick="onMoveTxt(130)" class="move-btn"><i class="fas fa-align-center"></i></button>
+                    <button onclick="onMoveTxt(250)" class="move-btn"><i class="fas fa-align-right"></i></button>
 
                     <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
                     <datalist id="fonts">
@@ -62,10 +65,6 @@
                         <option value="Impact"></option>
                         <option value="monospace"></option>
                     </datalist>
-
-                    <button onclick="onMoveTxt(10)">Move left</button>
-                    <button onclick="onMoveTxt(130)">Middle</button>
-                    <button onclick="onMoveTxt(250)">Move right</button>
 
                     <input oninput="onChangeTxtFill(this)" type="color" class="stroke" value="#ffffff" />
                     <input oninput="onChangeStroke(this)" type="color" class="fill" />
