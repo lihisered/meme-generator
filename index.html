@@ -13,10 +13,10 @@
         <header>
             <div class="main-header">
                 <div class="logo">Logo</div>
-                <!-- <ul class="main-nav">
+                <ul class="main-nav">
                     <li>Gallery</li>
                     <li>Memes</li>
-                </ul> -->
+                </ul>
             </div>
         </header>
 
@@ -41,7 +41,7 @@
                     <button onclick="onChangePos(-10)">Move up</button>
                     <button onclick="onChangePos(10)">Move down</button>
 
-                    <input oninput="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
+                    <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
                     <datalist id="fonts">
                         <option value="Arial"></option>
                         <option value="Impact"></option>

@@ -2,21 +2,44 @@
     box-sizing: border-box;
 }
 
+/* TYPOGRAPHY */
+
+@font-face {
+    font-family: poppins;
+    src: url(../font/poppins/Poppins-Medium.ttf);
+}
+
+/* BASIC */
+
 body {
-    margin: 0;
     background-color: #22252c;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: poppins;
 }
 
 .main-header {
-    padding: 20px;
+    height: 70px;
+    margin: 15px;
+    display: flex;
     color: white;
-    background-color: #0f9bb2;
+    border-radius: 50px;
+    background: linear-gradient(to right, #0f9bb2 0%, #30bb72 100%);
+    justify-content: space-between;
 }
 
 .main-header .logo {
     font-size: 25px;
+    line-height: 70px;
+    padding-left: 80px;
+}
+
+.main-header .main-nav {
+    list-style: none;
+    display: flex;
+    padding-right: 220px;
+}
+
+.main-header .main-nav > * {
+    line-height: 35px;
 }
 
 /* HELPERS */
