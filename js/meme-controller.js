@@ -10,11 +10,11 @@ function onCreateMeme(imgId) {
     initCanvas();
     createMeme(imgId);
 
-    document.querySelector('.gallery-container').hidden = true;
+    document.querySelector('.gallery-container').style.display = 'none';
 
     var elContainer = document.querySelector('.editor-container');
-    elContainer.hidden = false;
-    elContainer.classList.add('flex');
+    elContainer.style.display = 'flex';
+    // elContainer.classList.add('flex');
 
     renderCanvas();
     addListeners();

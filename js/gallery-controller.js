@@ -8,7 +8,6 @@ function onInit() {
 
 function renderGallery() {
     var imgs = getImgs();
-    console.log(imgs);
 
     var strHtmls = imgs.map((img) => {
         return `<img src="img/${img.id}.jpg" onclick="onCreateMeme('${img.id}')">`;
@@ -16,4 +15,7 @@ function renderGallery() {
 
     var elContainer = document.querySelector('.gallery-container');
     elContainer.innerHTML = strHtmls.join('');
+    elContainer.style.display = 'block';
+
+    document.querySelector('.editor-container').style.display = 'none';
 }

@@ -16,30 +16,47 @@ body {
     font-family: poppins;
 }
 
-.main-header {
-    height: 70px;
-    margin: 15px;
-    display: flex;
-    color: white;
+.header-conatiner {
+    padding-right: 200px;
+    padding-left: 80px;
     border-radius: 50px;
     background: linear-gradient(to right, #0f9bb2 0%, #30bb72 100%);
+}
+
+.main-header {
+    display: flex;
     justify-content: space-between;
+    margin: 15px;
+    color: white;
 }
 
 .main-header .logo {
+    height: 70px;
     font-size: 25px;
     line-height: 70px;
-    padding-left: 80px;
 }
 
 .main-header .main-nav {
     list-style: none;
     display: flex;
-    padding-right: 220px;
 }
 
-.main-header .main-nav > * {
+.main-header .main-nav li {
     line-height: 35px;
+    font-size: 1.312rem;
+    padding: 0 10px;
+    border-radius: 30px;
+}
+
+.main-header .main-nav li:first-of-type {
+    margin-right: 50px;
+}
+
+.main-header .main-nav li:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #21ac91;
+    transition: all 0.5s;
 }
 
 /* HELPERS */
