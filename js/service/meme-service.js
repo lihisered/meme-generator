@@ -13,7 +13,7 @@ function createMeme(imgId) {
                 txt: 'Enter text here',
                 size: 30,
                 align: 'left',
-                color: 'red',
+                color: 'white',
                 pos: { x: 140, y: 400 },
             },
         ],
@@ -59,6 +59,11 @@ function switchLine() {
 function removeLine() {
     gMeme.lines.splice(gMeme.selectedLineIdx, 1);
     switchLine();
+    saveMemeToStorage();
+}
+
+function changeTxtFill(color) {
+    gMeme.lines[gMeme.selectedLineIdx].color = color;
     saveMemeToStorage();
 }
 

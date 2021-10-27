@@ -27,9 +27,9 @@ function renderCanvas() {
     drawImg(meme.selectedImgId);
 }
 
-function drawText(text, size, x, y) {
+function drawText(text, size, color, x, y) {
     gCtx.lineWidth = 1;
-    gCtx.fillStyle = 'white';
+    gCtx.fillStyle = color;
     gCtx.strokeStyle = 'black';
     gCtx.font = `${size}px Impact`;
     gCtx.fillText(text, x, y);
@@ -46,9 +46,10 @@ function drawImg(imgId) {
         meme.lines.forEach((line) => {
             var txt = line.txt;
             var size = line.size;
+            var color = line.color;
             var x = line.pos.x;
             var y = line.pos.y;
-            drawText(txt, size, x, y);
+            drawText(txt, size, color, x, y);
         });
     };
 }
@@ -80,5 +81,11 @@ function onSwitchLine() {
 
 function onRemoveLine() {
     removeLine();
+    renderCanvas();
+}
+
+function onChangeTxtFill(elInput) {
+    var color = elInput.value;
+    changeTxtFill(color);
     renderCanvas();
 }

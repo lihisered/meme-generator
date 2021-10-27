@@ -44,6 +44,24 @@
                     <button onclick="onChangeSize(-1)">Decrease</button>
                     <button onclick="onChangePos(-10)">Move up</button>
                     <button onclick="onChangePos(10)">Move down</button>
+
+                    <input list="fonts" type="text" placeholder="Font" />
+                    <datalist id="fonts">
+                        <option value="Font 1"></option>
+                        <option value="Font 2"></option>
+                        <option value="Font 3"></option>
+                    </datalist>
+
+                    <button>Move left</button>
+                    <button>Middle</button>
+                    <button>Move right</button>
+
+                    <input
+                        oninput="onChangeTxtFill(this)"
+                        type="color"
+                        class="stroke"
+                    />
+                    <input type="color" class="fill" value="#ffffff" />
                 </div>
             </div>
         </div>

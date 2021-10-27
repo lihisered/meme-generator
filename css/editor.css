@@ -21,3 +21,11 @@
     text-align: center;
     padding: 10px;
 }
+
+.meme-editor .main-btns > * {
+    margin: 10px;
+}
+
+.meme-editor .txt-btns > * {
+    margin: 10px;
+}
