@@ -46,6 +46,8 @@
             <div class="meme-editor">
                 <input oninput="onChangeTxt(event)" type="text" class="txt-input" placeholder="Enter text here" />
                 <div class="main-btns">
+                    <button onclick="onChangePos(-10)"><i class="fas fa-long-arrow-alt-up"></i></button>
+                    <button onclick="onChangePos(10)"><i class="fas fa-long-arrow-alt-down"></i></button>
                     <button onclick="onSwitchLine()"><i class="fas fa-exchange-alt"></i></button>
                     <button onclick="onAddLine()"><i class="fas fa-plus"></i></button>
                     <button onclick="onRemoveLine()"><i class="fas fa-trash"></i></button>
@@ -53,8 +55,6 @@
                 <div class="txt-btns">
                     <button onclick="onChangeSize(1)">Increase</button>
                     <button onclick="onChangeSize(-1)">Decrease</button>
-                    <button onclick="onChangePos(-10)">Move up</button>
-                    <button onclick="onChangePos(10)">Move down</button>
 
                     <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" />
                     <datalist id="fonts">
@@ -70,9 +70,7 @@
                     <input oninput="onChangeTxtFill(this)" type="color" class="stroke" value="#ffffff" />
                     <input oninput="onChangeStroke(this)" type="color" class="fill" />
                 </div>
-                <button>
-                    <a href="#" download="meme.jpg" onclick="downloadImg(this)">Download</a>
-                </button>
+                <button><a href="#" download="meme.jpg" onclick="downloadImg(this)">Download</a></button>
             </div>
         </div>
 
