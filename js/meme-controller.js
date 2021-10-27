@@ -55,14 +55,16 @@ function drawImg(imgId) {
 
 function onChangeTxt(ev) {
     var txt = ev.target.value;
-
     changeTxt(txt);
     renderCanvas();
 }
 
 function onChangeSize(diff) {
-    console.log(diff);
-
     changeSize(diff);
+    renderCanvas();
+}
+
+function onChangePos(diff) {
+    changePos(diff);
     renderCanvas();
 }

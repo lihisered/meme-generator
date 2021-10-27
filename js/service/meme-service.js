@@ -32,6 +32,11 @@ function changeSize(diff) {
     saveMemeToStorage();
 }
 
+function changePos(diff) {
+    gMeme.lines[gMeme.selectedLineIdx].pos.y += diff;
+    saveMemeToStorage();
+}
+
 function getMeme() {
     return loadFromStorage(KEY);
 }
