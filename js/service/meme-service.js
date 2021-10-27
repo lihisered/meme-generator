@@ -55,6 +55,8 @@ function addLine(font = 'Impact') {
 }
 
 function switchLine() {
+    if (gMeme.lines.length === 1) return;
+
     if (gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
     else gMeme.selectedLineIdx = 0;
 
