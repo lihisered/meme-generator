@@ -45,11 +45,16 @@
                     <button onclick="onChangePos(-10)">Move up</button>
                     <button onclick="onChangePos(10)">Move down</button>
 
-                    <input list="fonts" type="text" placeholder="Font" />
+                    <input
+                        oninput="onChangeFont(event)"
+                        list="fonts"
+                        type="text"
+                        placeholder="Font"
+                    />
                     <datalist id="fonts">
-                        <option value="Font 1"></option>
-                        <option value="Font 2"></option>
-                        <option value="Font 3"></option>
+                        <option value="Arial"></option>
+                        <option value="Impact"></option>
+                        <option value="monospace"></option>
                     </datalist>
 
                     <button onclick="onMoveLeft()">Move left</button>

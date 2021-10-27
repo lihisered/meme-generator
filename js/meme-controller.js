@@ -27,11 +27,11 @@ function renderCanvas() {
     drawImg(meme.selectedImgId);
 }
 
-function drawText(text, size, color, stroke, x, y) {
+function drawText(text, font = 'Impact', size, color, stroke, x, y) {
     gCtx.lineWidth = 1;
     gCtx.fillStyle = color;
     gCtx.strokeStyle = stroke;
-    gCtx.font = `${size}px Impact`;
+    gCtx.font = `${size}px ${font}`;
     gCtx.fillText(text, x, y);
     gCtx.strokeText(text, x, y);
 }
@@ -45,12 +45,13 @@ function drawImg(imgId) {
 
         meme.lines.forEach((line) => {
             var txt = line.txt;
+            var font = line.font;
             var size = line.size;
             var color = line.color;
             var stroke = line.stroke;
             var x = line.pos.x;
             var y = line.pos.y;
-            drawText(txt, size, color, stroke, x, y);
+            drawText(txt, font, size, color, stroke, x, y);
         });
     };
 }
@@ -104,5 +105,11 @@ function onMoveLeft() {
 
 function onMoveRight() {
     moveRight();
+    renderCanvas();
+}
+
+function onChangeFont(elInput) {
+    var font = elInput.target.value;
+    changeFont(font);
     renderCanvas();
 }

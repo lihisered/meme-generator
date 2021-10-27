@@ -12,6 +12,7 @@ function createMeme(imgId) {
             {
                 txt: 'Enter text here',
                 size: 30,
+                font: 'Impact',
                 align: 'left',
                 color: 'white',
                 stroke: 'black',
@@ -81,6 +82,11 @@ function moveLeft() {
 function moveRight() {
     // FIX!
     gMeme.lines[gMeme.selectedLineIdx].pos.x = 250;
+    saveMemeToStorage();
+}
+
+function changeFont(font) {
+    gMeme.lines[gMeme.selectedLineIdx].font = font;
     saveMemeToStorage();
 }
 
