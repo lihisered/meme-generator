@@ -3,18 +3,6 @@ console.log('Meme service');
 
 const KEY = 'memeDB';
 var gMeme;
-//  = {
-//     selectedImgId: 5,
-//     selectedLineIdx: 0,
-//     lines: [
-//         {
-//             txt: 'I never eat Falafel',
-//             size: 20,
-//             align: 'left',
-//             color: 'red',
-//         },
-//     ],
-// };
 
 function createMeme(imgId) {
     var meme = {
@@ -23,14 +11,19 @@ function createMeme(imgId) {
         lines: [
             {
                 txt: 'Enter text here',
-                size: 20,
+                size: 30,
                 align: 'left',
                 color: 'red',
+                pos: { x: 160, y: 400 },
             },
         ],
     };
     gMeme = meme;
     saveMemeToStorage();
+}
+
+function getMeme() {
+    return loadFromStorage(KEY);
 }
 
 function saveMemeToStorage() {
