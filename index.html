@@ -71,7 +71,7 @@
                 </div>
                 <div>
                     <button class="save-btn" onclick="onSaveMeme()">Save</button>
-                    <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                    <button class="share-btn" onclick="uploadImg()"><i class="fas fa-share-alt"></i></button>
                     <button class="download-btn" onclick="downloadImg()">
                         <a href="#" download="meme.jpg" class="download-link"><i class="fas fa-download"></i></a>
                     </button>
@@ -82,6 +82,7 @@
         <script src="https://kit.fontawesome.com/dccbba1e6d.js" crossorigin="anonymous"></script>
 
         <script src="js/service/storage.js"></script>
+        <script src="js/service/share-service.js"></script>
 
         <script src="js/service/gallery-service.js"></script>
         <script src="js/gallery-controller.js"></script>
