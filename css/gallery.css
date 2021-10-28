@@ -84,6 +84,9 @@
     .imgs-container {
         padding-top: 10px;
     }
+    .imgs-container img {
+        height: 150px;
+    }
     .filter-imgs {
         height: unset;
         margin-top: 5%;
