@@ -18,6 +18,7 @@ function createMeme(imgId, font = 'Impact') {
                 align: 'left',
                 color: 'white',
                 stroke: 'black',
+                border: 'white',
                 pos: { x: 130, y: 400 },
             },
         ],
@@ -46,6 +47,7 @@ function addLine(font = 'Impact') {
         align: 'left',
         color: 'white',
         stroke: 'black',
+        border: 'white',
         pos: { x: 130, y: 100 },
     };
     if (gMeme.lines.length >= 2) line.pos = { x: 130, y: 250 };

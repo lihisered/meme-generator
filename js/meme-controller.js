@@ -17,6 +17,7 @@ function onCreateMeme(imgId) {
 
     renderCanvas();
     addListeners();
+    renderCanvas();
 }
 
 function initCanvas() {
@@ -46,8 +47,8 @@ function drawImg(imgId) {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
 
         meme.lines.forEach((line, idx) => {
-            var txt = line.txt;
             line.txtWidth = gCtx.measureText(line.txt).width;
+            var txt = line.txt;
             var font = line.font;
             var size = line.size;
             var color = line.color;
@@ -56,11 +57,13 @@ function drawImg(imgId) {
             var y = line.pos.y;
             drawText(txt, font, size, color, stroke, x, y);
 
-            var startX = line.pos.x - 10;
-            var startY = line.pos.y - line.size;
-            var endX = line.txtWidth + 20;
-            var endY = line.size + 10;
+            // FIX!
+            var startX = line.pos.x - 30;
+            var startY = line.pos.y - 50;
+            var endX = line.txtWidth + 60;
+            var endY = line.size + 50;
             var rectStroke = idx === meme.selectedLineIdx ? 'white' : 'black';
+            // console.log(startX, startY, endX, endY);
             drawRect(startX, startY, endX, endY, rectStroke);
         });
     };
