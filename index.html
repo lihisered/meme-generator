@@ -16,7 +16,7 @@
                     <div class="logo"><img src="logo/LOGO.png" alt="" /></div>
                     <ul class="main-nav">
                         <li onclick="renderGallery()">Gallery</li>
-                        <li ">About</li>
+                        <li>Memes</li>
                     </ul>
                     <button class="btn-menu" onclick="toggleMenu()">☰</button>
                 </div>
@@ -38,6 +38,8 @@
                 <div class="imgs-container"></div>
             </div>
         </main>
+
+        <!-- <section class="memes-container"></section> -->
 
         <section class="editor-container">
             <div class="canvas-container">
@@ -70,8 +72,9 @@
                     <input oninput="onChangeStroke(this)" type="color" class="fill" />
                 </div>
                 <div>
+                    <button class="save-btn" onclick="onSaveMeme()">Save</button>
                     <button class="share-btn"><i class="fas fa-share-alt"></i></button>
-                    <button class="save-btn" onclick="downloadImg()">
+                    <button class="download-btn" onclick="downloadImg()">
                         <a href="#" download="meme.jpg" class="download-link"><i class="fas fa-download"></i></a>
                     </button>
                 </div>
@@ -80,7 +83,7 @@
 
         <script src="https://kit.fontawesome.com/dccbba1e6d.js" crossorigin="anonymous"></script>
 
-        <!-- <script src="js/service/storage.js"></script> -->
+        <script src="js/service/storage.js"></script>
 
         <script src="js/service/gallery-service.js"></script>
         <script src="js/gallery-controller.js"></script>

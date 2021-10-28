@@ -3,6 +3,7 @@ console.log('Meme service');
 
 const KEY = 'memeDB';
 var gMeme;
+var gMemes = [];
 
 function createMeme(imgId, font = 'Impact') {
     gMeme = {
@@ -93,8 +94,17 @@ function moveMeme(dx, dy) {
     gMeme.lines[gMeme.selectedLineIdx].pos.y += dy;
 }
 
+function saveMeme() {
+    gMemes.push(gMeme);
+    saveToStorage('memesDB', gMemes);
+}
+
 function getMeme() {
     return gMeme;
+}
+
+function getMemes() {
+    return loadFromStorage('memesDB');
 }
 
 function saveMemeToStorage() {

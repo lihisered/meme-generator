@@ -111,6 +111,10 @@ function onChangeFont(elInput) {
     renderCanvas();
 }
 
+function onSaveMeme() {
+    saveMeme();
+}
+
 // Download
 
 function downloadImg() {

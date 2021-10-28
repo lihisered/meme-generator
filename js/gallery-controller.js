@@ -20,11 +20,13 @@ function renderGallery() {
     document.querySelector('.editor-container').style.display = 'none';
 }
 
-function changeFontSize(elSpan) {
-    console.log(elSpan.style.fontSize);
-    elSpan.style.fontSize;
-}
+function renderFilters() {}
 
 function toggleMenu() {
     document.body.classList.toggle('menu-open');
 }
+
+// function changeFontSize(elSpan) {
+//     console.log(elSpan.style.fontSize);
+//     elSpan.style.fontSize;
+// }
