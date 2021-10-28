@@ -54,7 +54,6 @@
 .main-btns .fa-trash {
     background-color: #e43d36;
     box-shadow: 2px 2px 0 #b62f2a;
-    /* box-shadow: 0 1px 6px #b62f2a, 0 1px 4px #b62f2a; */
 }
 
 .main-btns .fa-plus {
@@ -112,7 +111,11 @@
 }
 
 .font-input {
+    height: 40px;
     outline: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 #dbdbdb;
 }
 
 .save-btn,
@@ -177,9 +180,10 @@
         height: 350px;
     }
     .meme-editor {
+        padding: 5px;
         margin: auto;
         width: 350px;
-        height: 250px;
+        height: auto;
     }
     .meme-editor .txt-input {
         margin: 10px 30px;
@@ -189,6 +193,7 @@
         font-size: 20px;
     }
     .txt-btns {
+        padding: 5px;
         margin: 10px 10px;
     }
     .txt-btns > * {

@@ -6,9 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Meme Maker</title>
         <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/gallery.css" />
-        <link rel="stylesheet" href="css/editor.css" />
     </head>
+
     <body onload="onInit()">
         <div class="main-screen" onclick="toggleMenu()"></div>
         <header>
@@ -40,7 +39,7 @@
             </div>
         </main>
 
-        <div class="editor-container">
+        <section class="editor-container">
             <div class="canvas-container">
                 <canvas class="canvas" height="450" width="450"></canvas>
             </div>
@@ -56,15 +55,15 @@
                 <div class="txt-btns">
                     <button onclick="onChangeSize(1)" class="increase"><i class="fas fa-font"></i></button>
                     <button onclick="onChangeSize(-1)" class="decrease"><i class="fas fa-font"></i></button>
-                    <button onclick="onMoveTxt(10)" class="move-btn"><i class="fas fa-align-left"></i></button>
-                    <button onclick="onMoveTxt(130)" class="move-btn"><i class="fas fa-align-center"></i></button>
-                    <button onclick="onMoveTxt(250)" class="move-btn"><i class="fas fa-align-right"></i></button>
+                    <button onclick="onMoveTxt(-10)" class="move-btn"><i class="fas fa-align-left"></i></button>
+                    <button onclick="onMoveTxt()" class="move-btn"><i class="fas fa-align-center"></i></button>
+                    <button onclick="onMoveTxt(10)" class="move-btn"><i class="fas fa-align-right"></i></button>
 
                     <input onchange="onChangeFont(event)" list="fonts" type="text" placeholder="Impact" class="font-input" />
                     <datalist id="fonts">
                         <option value="Arial"></option>
                         <option value="Impact"></option>
-                        <option value="monospace"></option>
+                        <option value="Monospace"></option>
                     </datalist>
 
                     <input oninput="onChangeTxtFill(this)" type="color" class="stroke" value="#ffffff" />
@@ -77,12 +76,11 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <script src="https://kit.fontawesome.com/dccbba1e6d.js" crossorigin="anonymous"></script>
 
-        <script src="js/utils.js"></script>
-        <script src="js/service/storage.js"></script>
+        <!-- <script src="js/service/storage.js"></script> -->
 
         <script src="js/service/gallery-service.js"></script>
         <script src="js/gallery-controller.js"></script>

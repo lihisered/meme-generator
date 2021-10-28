@@ -1,3 +1,6 @@
+@import url('gallery.css');
+@import url('editor.css');
+
 * {
     box-sizing: border-box;
 }
@@ -52,6 +55,7 @@ body.menu-open .main-screen {
 }
 
 .header-conatiner {
+    margin: 0 10px;
     padding-right: 200px;
     padding-left: 80px;
     border-radius: 50px;
@@ -99,12 +103,6 @@ body.menu-open .main-screen {
     border-radius: 150px;
 }
 
-/* HELPERS */
-
-.flex {
-    display: flex;
-}
-
 @media (max-width: 1000px) {
     .header-conatiner {
         padding-right: 80px;
@@ -120,7 +118,6 @@ body.menu-open .main-screen {
     }
     .main-header {
         height: 80px;
-        /* margin-top: unset; */
     }
     .btn-menu {
         display: inline-block;
@@ -153,19 +150,12 @@ body.menu-open .main-screen {
         transform: translateX(0);
         box-shadow: -2px -2px 20px rgba(0, 0, 0, 0.25);
     }
-    .main-nav > *:not(:last-child) {
-        margin: 0;
-    }
-    .main-nav:nth-of-type(1) {
-        border: none;
-    }
     .main-header .main-nav li {
         color: #22252c;
         padding: 30px;
         margin: unset;
         border-radius: unset;
         width: 100%;
-        /* border-bottom: 1px solid #22252c; */
     }
     .main-header .main-nav li:hover {
         background-color: unset;

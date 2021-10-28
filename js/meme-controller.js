@@ -100,8 +100,8 @@ function onChangeStroke(elInput) {
     renderCanvas();
 }
 
-function onMoveTxt(width) {
-    moveTxt(width);
+function onMoveTxt(diff) {
+    moveTxt(diff);
     renderCanvas();
 }
 

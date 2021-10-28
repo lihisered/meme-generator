@@ -75,8 +75,9 @@ function changeStroke(color) {
     gMeme.lines[gMeme.selectedLineIdx].stroke = color;
 }
 
-function moveTxt(width) {
-    gMeme.lines[gMeme.selectedLineIdx].pos.x = width;
+function moveTxt(diff) {
+    if (!diff) gMeme.lines[gMeme.selectedLineIdx].pos.x = 130;
+    else gMeme.lines[gMeme.selectedLineIdx].pos.x += diff;
 }
 
 function changeFont(font) {
