@@ -195,7 +195,7 @@
         font-size: 20px;
     }
     .main-btns .fas {
-        font-size: 20px;
+        font-size: 16px;
     }
     .txt-btns {
         padding: 5px;
@@ -204,6 +204,11 @@
     .txt-btns > * {
         margin: 5px;
     }
+    .main-btns .fa-long-arrow-alt-up,
+    .main-btns .fa-long-arrow-alt-down {
+        width: 40px;
+    }
+
     .save-btn,
     .share-btn,
     .download-btn {
