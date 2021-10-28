@@ -12,6 +12,7 @@ function createMeme(imgId, font = 'Impact') {
         lines: [
             {
                 txt: 'Enter text here',
+                txtWidth: 177.7001953125,
                 size: 30,
                 font,
                 align: 'left',
@@ -39,6 +40,7 @@ function addLine(font = 'Impact') {
     if (gMeme.lines.length === 3) return;
     var line = {
         txt: '',
+        txtWidth: 0,
         size: 30,
         font,
         align: 'left',
@@ -53,10 +55,10 @@ function addLine(font = 'Impact') {
 
 function switchLine() {
     if (gMeme.lines.length === 1) return;
-
-    gMeme.selectedLineIdx++;
-
-    if (gMeme.selectedLineIdx === 3 || gMeme.lines.length === 0) gMeme.selectedLineIdx = 0;
+    else if (gMeme.lines.length === 2 && gMeme.selectedLineIdx === 1) gMeme.selectedLineIdx = 0;
+    else if (gMeme.lines.length === 2 && gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
+    else if (gMeme.selectedLineIdx === 3 || gMeme.lines.length === 0) gMeme.selectedLineIdx = 0;
+    else gMeme.selectedLineIdx++;
 
     var elInput = document.querySelector('.txt-input');
     elInput.value = gMeme.lines.length > 1 ? gMeme.lines[gMeme.selectedLineIdx].txt : '';

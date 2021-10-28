@@ -45,8 +45,9 @@ function drawImg(imgId) {
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
 
-        meme.lines.forEach((line) => {
+        meme.lines.forEach((line, idx) => {
             var txt = line.txt;
+            line.txtWidth = gCtx.measureText(line.txt).width;
             var font = line.font;
             var size = line.size;
             var color = line.color;
@@ -54,8 +55,23 @@ function drawImg(imgId) {
             var x = line.pos.x;
             var y = line.pos.y;
             drawText(txt, font, size, color, stroke, x, y);
+
+            var startX = line.pos.x - 10;
+            var startY = line.pos.y - line.size;
+            var endX = line.txtWidth + 20;
+            var endY = line.size + 10;
+            var rectStroke = idx === meme.selectedLineIdx ? 'white' : 'black';
+            drawRect(startX, startY, endX, endY, rectStroke);
         });
     };
+}
+
+function drawRect(x, y, xEnd, yEnd, color = 'black') {
+    gCtx.beginPath();
+    gCtx.rect(x, y, xEnd, yEnd);
+    gCtx.strokeStyle = color;
+    gCtx.stroke();
+    gCtx.closePath();
 }
 
 function onChangeTxt(ev) {
