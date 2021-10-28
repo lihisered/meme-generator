@@ -25,7 +25,7 @@ function initCanvas() {
 }
 
 function renderCanvas() {
-    var meme = getMeme();
+    const meme = getMeme();
     drawImg(meme.selectedImgId);
 }
 
@@ -39,7 +39,7 @@ function drawText(text, font = 'Impact', size, color, stroke, x, y) {
 }
 
 function drawImg(imgId) {
-    var meme = getMeme();
+    const meme = getMeme();
     var img = new Image();
     img.src = `img/${imgId}.jpg`;
     img.onload = () => {
@@ -59,7 +59,7 @@ function drawImg(imgId) {
 }
 
 function onChangeTxt(ev) {
-    var txt = ev.target.value;
+    const txt = ev.target.value;
     changeTxt(txt);
     renderCanvas();
 }
@@ -89,13 +89,13 @@ function onRemoveLine() {
 }
 
 function onChangeTxtFill(elInput) {
-    var color = elInput.value;
+    const color = elInput.value;
     changeTxtFill(color);
     renderCanvas();
 }
 
 function onChangeStroke(elInput) {
-    var strokeColor = elInput.value;
+    const strokeColor = elInput.value;
     changeStroke(strokeColor);
     renderCanvas();
 }
@@ -106,7 +106,7 @@ function onMoveTxt(diff) {
 }
 
 function onChangeFont(elInput) {
-    var font = elInput.target.value;
+    const font = elInput.target.value;
     changeFont(font);
     renderCanvas();
 }
@@ -126,7 +126,7 @@ function downloadImg() {
 // Drag and drop!
 
 function isTxtClicked(clickedPos) {
-    var meme = getMeme();
+    const meme = getMeme();
     const pos = meme.lines[meme.selectedLineIdx].pos;
     const distance = Math.sqrt((pos.x - clickedPos.x) ** 2 + (pos.y - clickedPos.y) ** 2);
     return distance <= 200;

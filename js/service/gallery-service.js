@@ -7,7 +7,7 @@ var gKeywords;
 createImgs();
 
 function createImg(id, keywords = 'happy') {
-    var img = { id, url: `img/${id}.jpg`, keywords: ['happy'] };
+    var img = { id, url: `img/${id}.jpg`, keywords };
     gImgs.push(img);
 }
 

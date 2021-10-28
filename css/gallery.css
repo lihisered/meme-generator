@@ -16,7 +16,6 @@
     border-radius: 40px;
     padding-left: 5%;
     margin-left: 3%;
-    outline: none;
 }
 
 .filter-imgs {
@@ -94,7 +93,7 @@
         padding: unset;
     }
     .gallery-container {
-        margin: 10px auto;
+        margin: 10px;
     }
     .gallery-container button {
         font-size: 11px;

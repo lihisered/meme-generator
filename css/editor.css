@@ -52,32 +52,32 @@
 }
 
 .main-btns .fa-trash {
-    background-color: #e43d36;
-    box-shadow: 2px 2px 0 #b62f2a;
+    box-shadow: 1px 5px 0 #902a25, inset 0 5px 0 #b03a36;
+    background-image: linear-gradient(310deg, #d4615c 0%, #b0261f94 100%);
 }
 
 .main-btns .fa-plus {
-    background-color: #39be4e;
-    box-shadow: 2px 2px 0 #2e9e3f;
+    box-shadow: 1px 5px 0 #076a3d, inset 0 5px 0 #36b049;
+    background-image: linear-gradient(260deg, #3b8c47 0%, #49ce5e 100%);
 }
 
 .main-btns .fa-exchange-alt {
-    transform: rotate(90deg);
-    background-color: #48b5d1;
-    box-shadow: 2px -2px 0 #328397;
     padding: 12px 10px;
+    transform: rotate(90deg);
+    box-shadow: 4px 0px 0 #348296, inset 0 5px 0 #4097ac;
+    background-image: linear-gradient(260deg, #48b5d1 0%, #3a8192 100%);
 }
 
 .main-btns .fa-long-arrow-alt-up {
     width: 46px;
-    background-color: pink;
-    box-shadow: 2px 2px 0 #bd8c94;
+    box-shadow: 1px 5px 0 #b68b92, inset 0 5px 0 #f0bfc7;
+    background-image: linear-gradient(285deg, #f0bfc7 0%, #c498a0 100%);
 }
 
 .main-btns .fa-long-arrow-alt-down {
     width: 46px;
-    background-color: plum;
-    box-shadow: 2px 2px 0 #af7caf;
+    box-shadow: 1px 5px 0 #8d658d, inset 0 5px 0 plum;
+    background-image: linear-gradient(134deg, #af7caf 0%, plum 100%);
 }
 
 .txt-btns {
@@ -112,7 +112,6 @@
 
 .font-input {
     height: 40px;
-    outline: none;
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 0 #dbdbdb;
