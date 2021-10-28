@@ -25,8 +25,7 @@ function initCanvas() {
 }
 
 function renderCanvas() {
-    // var meme = getMeme();
-    var meme = gMeme;
+    var meme = getMeme();
     drawImg(meme.selectedImgId);
 }
 
@@ -40,8 +39,7 @@ function drawText(text, font = 'Impact', size, color, stroke, x, y) {
 }
 
 function drawImg(imgId) {
-    // var meme = getMeme();
-    var meme = gMeme;
+    var meme = getMeme();
     var img = new Image();
     img.src = `img/${imgId}.jpg`;
     img.onload = () => {
@@ -115,8 +113,8 @@ function onChangeFont(elInput) {
 
 // Download
 
-function downloadImg(elLink) {
-    console.log(elLink);
+function downloadImg() {
+    var elLink = document.querySelector('.download-link');
     var imgContent = gElCanvas.toDataURL('image/jpeg');
     elLink.href = imgContent;
 }

@@ -10,14 +10,16 @@
         <link rel="stylesheet" href="css/editor.css" />
     </head>
     <body onload="onInit()">
+        <div class="main-screen" onclick="toggleMenu()"></div>
         <header>
             <div class="header-conatiner">
                 <div class="main-header">
                     <div class="logo"><img src="logo/LOGO.png" alt="" /></div>
                     <ul class="main-nav">
                         <li onclick="renderGallery()">Gallery</li>
-                        <li>Memes</li>
+                        <li ">About</li>
                     </ul>
+                    <button class="btn-menu" onclick="toggleMenu()">☰</button>
                 </div>
             </div>
         </header>
@@ -25,9 +27,8 @@
         <main>
             <div class="gallery-container">
                 <input class="search-input" type="text" placeholder="Search" />
-                <!-- <i class="fas fa-search"></i> -->
                 <div class="filter-imgs">
-                    <span>Funny</span>
+                    <span onclick="changeFontSize(this)">Funny</span>
                     <span>Animal</span>
                     <span>Men</span>
                     <span>Women</span>
@@ -71,8 +72,8 @@
                 </div>
                 <div>
                     <button class="share-btn"><i class="fas fa-share-alt"></i></button>
-                    <button class="save-btn">
-                        <a href="#" download="meme.jpg" onclick="downloadImg(this)"><i class="fas fa-download"></i></a>
+                    <button class="save-btn" onclick="downloadImg()">
+                        <a href="#" download="meme.jpg" class="download-link"><i class="fas fa-download"></i></a>
                     </button>
                 </div>
             </div>

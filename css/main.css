@@ -17,6 +17,7 @@
 /* BASIC */
 
 body {
+    margin: 0;
     background-color: #22252c;
     font-family: poppins medium;
 }
@@ -28,6 +29,26 @@ button {
 a {
     text-decoration: none;
     color: unset;
+}
+
+/* SCREENS */
+
+.main-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+body.menu-open .main-screen {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .header-conatiner {
@@ -72,8 +93,83 @@ a {
     transition: all 0.5s;
 }
 
+.btn-menu {
+    display: none;
+    background-color: #fefefe;
+    border-radius: 150px;
+}
+
 /* HELPERS */
 
 .flex {
     display: flex;
+}
+
+@media (max-width: 1000px) {
+    .header-conatiner {
+        padding-right: 80px;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-conatiner {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: unset;
+    }
+    .main-header {
+        height: 80px;
+        /* margin-top: unset; */
+    }
+    .btn-menu {
+        display: inline-block;
+        color: #2ab57f;
+        font-size: 30px;
+        height: 45px;
+        width: 45px;
+        margin-top: 18px;
+        border: none;
+    }
+    .main-header .logo img {
+        height: 40px;
+        margin-top: 20px;
+    }
+    /* HAMBURGER */
+    .main-header .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        z-index: 1;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 200px;
+        transform: translateX(100%);
+        border-inline-start: 1px solid #e0e0e0;
+        transition: transform 0.6s, box-shadow 0.6s;
+    }
+    body.menu-open .main-nav {
+        transform: translateX(0);
+        box-shadow: -2px -2px 20px rgba(0, 0, 0, 0.25);
+    }
+    .main-nav > *:not(:last-child) {
+        margin: 0;
+    }
+    .main-nav:nth-of-type(1) {
+        border: none;
+    }
+    .main-header .main-nav li {
+        color: #22252c;
+        padding: 30px;
+        margin: unset;
+        border-radius: unset;
+        width: 100%;
+        /* border-bottom: 1px solid #22252c; */
+    }
+    .main-header .main-nav li:hover {
+        background-color: unset;
+        color: #21ac91;
+        transition: all 0.5s;
+    }
 }

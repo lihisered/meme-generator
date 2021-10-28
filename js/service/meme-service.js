@@ -5,7 +5,7 @@ const KEY = 'memeDB';
 var gMeme;
 
 function createMeme(imgId, font = 'Impact') {
-    var meme = {
+    gMeme = {
         selectedImgId: imgId,
         selectedLineIdx: 0,
         lines: [
@@ -20,26 +20,22 @@ function createMeme(imgId, font = 'Impact') {
             },
         ],
     };
-    gMeme = meme;
-    saveMemeToStorage();
 }
 
 function changeTxt(txt) {
     gMeme.lines[gMeme.selectedLineIdx].txt = txt;
-    saveMemeToStorage();
 }
 
 function changeSize(diff) {
     gMeme.lines[gMeme.selectedLineIdx].size += diff;
-    saveMemeToStorage();
 }
 
 function changePos(diff) {
     gMeme.lines[gMeme.selectedLineIdx].pos.y += diff;
-    saveMemeToStorage();
 }
 
 function addLine(font = 'Impact') {
+    if (gMeme.lines.length === 3) return;
     var line = {
         txt: '',
         size: 30,
@@ -49,63 +45,55 @@ function addLine(font = 'Impact') {
         stroke: 'black',
         pos: { x: 130, y: 100 },
     };
+    if (gMeme.lines.length >= 2) line.pos = { x: 130, y: 250 };
     gMeme.lines.push(line);
     switchLine();
-    saveMemeToStorage();
 }
 
 function switchLine() {
     if (gMeme.lines.length === 1) return;
 
-    if (gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
-    else gMeme.selectedLineIdx = 0;
+    gMeme.selectedLineIdx++;
+
+    if (gMeme.selectedLineIdx === 3 || gMeme.lines.length === 0) gMeme.selectedLineIdx = 0;
 
     var elInput = document.querySelector('.txt-input');
     if (gMeme.lines.length > 1) elInput.value = gMeme.lines[gMeme.selectedLineIdx].txt;
     else elInput.value = '';
-
-    saveMemeToStorage();
 }
 
 function removeLine() {
-    if (gMeme.lines.length === 1) gMeme.selectedLineIdx = 0;
     gMeme.lines.splice(gMeme.selectedLineIdx, 1);
-    saveMemeToStorage();
+    if (gMeme.lines.length === 1) gMeme.selectedLineIdx = 0;
 }
 
 function changeTxtFill(color) {
     gMeme.lines[gMeme.selectedLineIdx].color = color;
-    saveMemeToStorage();
 }
 
 function changeStroke(color) {
     gMeme.lines[gMeme.selectedLineIdx].stroke = color;
-    saveMemeToStorage();
 }
 
 function moveTxt(width) {
     gMeme.lines[gMeme.selectedLineIdx].pos.x = width;
-    saveMemeToStorage();
 }
 
 function changeFont(font) {
     gMeme.lines[gMeme.selectedLineIdx].font = font;
-    saveMemeToStorage();
 }
 
 function setTxtDrag(isDrag) {
     gMeme.isDrag = isDrag;
-    saveMemeToStorage();
 }
 
 function moveMeme(dx, dy) {
     gMeme.lines[gMeme.selectedLineIdx].pos.x += dx;
     gMeme.lines[gMeme.selectedLineIdx].pos.y += dy;
-    saveToStorage(KEY, gMeme);
 }
 
 function getMeme() {
-    return loadFromStorage(KEY);
+    return gMeme;
 }
 
 function saveMemeToStorage() {

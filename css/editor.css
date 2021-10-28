@@ -1,5 +1,6 @@
 .editor-container {
     display: none;
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
     padding: 20px;
@@ -110,10 +111,15 @@
     content: '-';
 }
 
+.font-input {
+    outline: none;
+}
+
 .save-btn,
 .share-btn {
     margin: 5px;
     width: 200px;
+    width: 40%;
     height: 40px;
     color: white;
     font-size: 1.25rem;
@@ -140,4 +146,57 @@
 .save-btn::after {
     content: 'Download';
     padding-left: 15px;
+}
+
+@media (max-width: 1000px) {
+    .canvas {
+        width: 400px;
+        height: 385px;
+    }
+    .meme-editor {
+        width: 400px;
+        height: 385px;
+        font-size: unset;
+    }
+    .txt-btns {
+        margin: 15px 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .canvas-container {
+        display: flex;
+    }
+    .editor-container {
+        padding: unset;
+        flex-direction: column;
+    }
+    .canvas {
+        margin: auto;
+        width: 350px;
+        height: 350px;
+    }
+    .meme-editor {
+        margin: auto;
+        width: 350px;
+        height: 250px;
+    }
+    .meme-editor .txt-input {
+        margin: 10px 30px;
+        font-size: 20px;
+    }
+    .main-btns .fas {
+        font-size: 20px;
+    }
+    .txt-btns {
+        margin: 10px 10px;
+    }
+    .txt-btns > * {
+        margin: 5px;
+    }
+    .save-btn,
+    .share-btn {
+        height: unset;
+        font-size: 15px;
+    }
 }

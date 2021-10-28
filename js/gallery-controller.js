@@ -19,3 +19,12 @@ function renderGallery() {
     document.querySelector('.gallery-container').style.display = 'block';
     document.querySelector('.editor-container').style.display = 'none';
 }
+
+function changeFontSize(elSpan) {
+    console.log(elSpan.style.fontSize);
+    elSpan.style.fontSize;
+}
+
+function toggleMenu() {
+    document.body.classList.toggle('menu-open');
+}
