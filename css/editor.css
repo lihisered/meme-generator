@@ -50,12 +50,6 @@
     color: #ebeef3;
 }
 
-.main-btns .fas:active {
-    border: 1px solid white;
-    /* transform: scale(0.9); */
-    /* transition: 0.1s; */
-}
-
 .main-btns .fa-trash {
     background-color: #e43d36;
     box-shadow: 2px 2px 0 #b62f2a;
@@ -97,6 +91,7 @@
     margin: 10px;
     background-color: white;
 }
+
 .txt-btns .increase,
 .txt-btns .decrease,
 .txt-btns .move-btn {
