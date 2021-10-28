@@ -59,8 +59,7 @@ function switchLine() {
     if (gMeme.selectedLineIdx === 3 || gMeme.lines.length === 0) gMeme.selectedLineIdx = 0;
 
     var elInput = document.querySelector('.txt-input');
-    if (gMeme.lines.length > 1) elInput.value = gMeme.lines[gMeme.selectedLineIdx].txt;
-    else elInput.value = '';
+    elInput.value = gMeme.lines.length > 1 ? gMeme.lines[gMeme.selectedLineIdx].txt : '';
 }
 
 function removeLine() {
