@@ -57,9 +57,9 @@ function addLine(font = 'Impact') {
 
 function switchLine() {
     if (gMeme.lines.length === 1) return;
-    else if (gMeme.lines.length === 2 && gMeme.selectedLineIdx === 1) gMeme.selectedLineIdx = 0;
+    else if ((gMeme.lines.length === 2 && gMeme.selectedLineIdx === 1) || gMeme.selectedLineIdx === 2 || gMeme.lines.length === 0)
+        gMeme.selectedLineIdx = 0;
     else if (gMeme.lines.length === 2 && gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
-    else if (gMeme.selectedLineIdx === 3 || gMeme.lines.length === 0) gMeme.selectedLineIdx = 0;
     else gMeme.selectedLineIdx++;
 
     var elInput = document.querySelector('.txt-input');

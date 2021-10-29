@@ -60,7 +60,25 @@
 
 .imgs-container {
     text-align: center;
-    padding-top: 20px;
+    overflow-y: scroll;
+    height: 69vh;
+    padding: 10px;
+}
+
+.imgs-container::-webkit-scrollbar {
+    width: 15px;
+}
+
+.imgs-container::-webkit-scrollbar-track {
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #22252c;
+}
+
+.imgs-container::-webkit-scrollbar-thumb {
+    height: 15px;
+    border-radius: 8px;
+    background: linear-gradient(#33be6d, #0c98b9);
 }
 
 .imgs-container img {
