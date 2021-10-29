@@ -208,7 +208,13 @@
     .main-btns .fa-long-arrow-alt-down {
         width: 40px;
     }
-
+    .txt-btns .increase,
+    .txt-btns .decrease,
+    .txt-btns .move-btn {
+        font-size: 15px;
+        height: 40px;
+        width: 40px;
+    }
     .save-btn,
     .share-btn,
     .download-btn {

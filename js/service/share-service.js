@@ -1,5 +1,4 @@
 function uploadImg() {
-    console.log('Here');
     const imgDataUrl = gElCanvas.toDataURL('image/jpeg');
 
     function onSuccess(uploadedImgUrl) {

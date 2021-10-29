@@ -12,7 +12,7 @@
     font-size: 1.312rem;
     font-family: poppins light;
     border: none;
-    height: 48px;
+    height: 56px;
     border-radius: 40px;
     padding-left: 5%;
     margin-left: 3%;
@@ -22,7 +22,6 @@
     display: inline-block;
     margin-left: 1%;
     padding: 13px;
-    height: 3rem;
     text-align: center;
     width: 40%;
     border-radius: 40px;
@@ -34,6 +33,18 @@
     font-size: 16px;
     color: #fefefe;
     font-family: poppins light;
+}
+
+.filter-imgs > *:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.filter-imgs > *:nth-of-type(3) {
+    font-size: 12px;
+}
+
+.filter-imgs > *:nth-of-type(5) {
+    font-size: 14px;
 }
 
 .gallery-container button {
@@ -91,6 +102,11 @@
     .filter-imgs > * {
         font-size: 9px;
         padding: unset;
+    }
+    .filter-imgs > *:nth-of-type(2),
+    .filter-imgs > *:nth-of-type(3),
+    .filter-imgs > *:nth-of-type(5) {
+        font-size: 9px;
     }
     .gallery-container {
         margin: 10px;

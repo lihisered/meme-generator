@@ -143,8 +143,6 @@ function onSaveMeme() {
     saveMeme();
 }
 
-// Download
-
 function downloadImg() {
     var elLink = document.querySelector('.download-link');
     var imgContent = gElCanvas.toDataURL('image/jpeg');
