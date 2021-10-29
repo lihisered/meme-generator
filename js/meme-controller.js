@@ -63,7 +63,6 @@ function drawImg(imgId) {
             var endX = line.txtWidth + 60;
             var endY = line.size + 50;
             var rectStroke = idx === meme.selectedLineIdx ? 'white' : 'black';
-            // console.log(startX, startY, endX, endY);
             drawRect(startX, startY, endX, endY, rectStroke);
         });
     };
@@ -119,8 +118,18 @@ function onChangeStroke(elInput) {
     renderCanvas();
 }
 
-function onMoveTxt(diff) {
-    moveTxt(diff);
+function onMoveTxt() {
+    moveTxt();
+    renderCanvas();
+}
+
+function onMoveRight() {
+    moveRight();
+    renderCanvas();
+}
+
+function onMoveLeft() {
+    moveLeft();
     renderCanvas();
 }
 
@@ -148,7 +157,7 @@ function isTxtClicked(clickedPos) {
     const meme = getMeme();
     const pos = meme.lines[meme.selectedLineIdx].pos;
     const distance = Math.sqrt((pos.x - clickedPos.x) ** 2 + (pos.y - clickedPos.y) ** 2);
-    return distance <= 200;
+    return distance <= gMeme.lines[gMeme.selectedLineIdx].txtWidth;
 }
 
 function addListeners() {

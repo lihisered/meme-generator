@@ -79,9 +79,17 @@ function changeStroke(color) {
     gMeme.lines[gMeme.selectedLineIdx].stroke = color;
 }
 
-function moveTxt(diff) {
-    if (!diff) gMeme.lines[gMeme.selectedLineIdx].pos.x = 130;
-    else gMeme.lines[gMeme.selectedLineIdx].pos.x += diff;
+function moveTxt() {
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = 130;
+}
+
+function moveRight() {
+    var posX = 450 - gMeme.lines[gMeme.selectedLineIdx].txtWidth - 60;
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = posX;
+}
+
+function moveLeft() {
+    gMeme.lines[gMeme.selectedLineIdx].pos.x = 60;
 }
 
 function changeFont(font) {
