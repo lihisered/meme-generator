@@ -51,6 +51,7 @@ a {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.6s;
+    z-index: 3;
 }
 
 body.menu-open .main-screen {

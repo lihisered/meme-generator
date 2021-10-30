@@ -89,7 +89,6 @@
 .txt-btns > * {
     border: none;
     margin: 10px;
-    background-color: white;
 }
 
 .txt-btns .increase,
@@ -115,6 +114,45 @@
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 0 #dbdbdb;
+}
+
+.stroke-container,
+.palette-container {
+    position: relative;
+    display: inline-flex;
+    height: 45px;
+    width: 45px;
+}
+
+.stroke {
+    text-decoration: underline;
+}
+
+.stroke,
+.palette {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    font-size: 1.25rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 0 #dbdbdb;
+    transition: 0.3s;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stroke-picker,
+.color-picker {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .save-btn,
