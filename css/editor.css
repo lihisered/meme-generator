@@ -217,9 +217,13 @@
     .download-btn {
         width: 29%;
     }
+    .main-btns .fa-long-arrow-alt-down,
+    .main-btns .fa-long-arrow-alt-up {
+        width: 49px;
+    }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 365px) {
     .canvas {
         height: 300px;
         width: 300px;
@@ -242,6 +246,10 @@
     }
     .font-input {
         width: 35%;
+    }
+    .main-btns .fa-long-arrow-alt-down,
+    .main-btns .fa-long-arrow-alt-up {
+        width: 38px;
     }
     .save-btn,
     .share-btn,
