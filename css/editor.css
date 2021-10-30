@@ -212,8 +212,8 @@
     .txt-btns .decrease,
     .txt-btns .move-btn {
         font-size: 15px;
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
     }
     .save-btn,
     .share-btn,
@@ -222,5 +222,30 @@
         font-size: 12px;
         width: 29%;
         padding: 10px 0;
+    }
+}
+
+@media (max-width: 330px) {
+    .canvas {
+        height: 300px;
+        width: 300px;
+    }
+    .meme-editor {
+        width: 300px;
+    }
+    .font-input {
+        width: 35%;
+    }
+    .save-btn,
+    .share-btn,
+    .download-btn {
+        font-size: 11px;
+        width: 28%;
+    }
+    .share-btn::after {
+        padding-left: 5px;
+    }
+    .download-btn::after {
+        padding-left: 5px;
     }
 }
