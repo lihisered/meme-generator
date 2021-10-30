@@ -91,7 +91,13 @@
     cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
+    .imgs-container img {
+        height: 215px;
+    }
+}
+
+@media (max-width: 1050px) {
     .search-input {
         display: block;
         width: 90%;
@@ -103,9 +109,6 @@
     }
     .gallery-container button {
         width: 13%;
-    }
-    .imgs-container img {
-        height: 215px;
     }
 }
 
