@@ -156,22 +156,7 @@
     padding-left: 10px;
 }
 
-@media (max-width: 1000px) {
-    .canvas {
-        width: 400px;
-        height: 385px;
-    }
-    .meme-editor {
-        width: 400px;
-        height: 385px;
-        font-size: unset;
-    }
-    .txt-btns {
-        margin: 15px 25px;
-    }
-}
-
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .canvas-container {
         display: flex;
     }
@@ -181,47 +166,56 @@
     }
     .canvas {
         margin: auto;
-        width: 350px;
-        height: 350px;
     }
     .meme-editor {
         padding: 5px;
         margin: auto;
-        width: 350px;
         height: auto;
     }
     .meme-editor .txt-input {
         margin: 10px 30px;
-        font-size: 20px;
+        font-size: 25px;
     }
     .main-btns .fas {
-        font-size: 16px;
+        font-size: 25px;
     }
     .txt-btns {
         padding: 5px;
         margin: 10px 10px;
     }
     .txt-btns > * {
-        margin: 2px;
-    }
-    .main-btns .fa-long-arrow-alt-up,
-    .main-btns .fa-long-arrow-alt-down {
-        width: 40px;
+        margin: 5px;
     }
     .txt-btns .increase,
     .txt-btns .decrease,
     .txt-btns .move-btn {
-        font-size: 15px;
-        height: 35px;
-        width: 35px;
+        font-size: 20px;
+        height: 45px;
+        width: 45px;
     }
     .save-btn,
     .share-btn,
     .download-btn {
         height: unset;
         font-size: 12px;
-        width: 29%;
+        width: 50%;
         padding: 10px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .canvas {
+        height: 350px;
+        width: 350px;
+    }
+    .meme-editor {
+        height: auto;
+        width: 350px;
+    }
+    .save-btn,
+    .share-btn,
+    .download-btn {
+        width: 29%;
     }
 }
 
@@ -232,6 +226,19 @@
     }
     .meme-editor {
         width: 300px;
+    }
+    .meme-editor .txt-input {
+        font-size: 16px;
+    }
+    .main-btns .fas {
+        font-size: 16px;
+    }
+    .txt-btns .increase,
+    .txt-btns .decrease,
+    .txt-btns .move-btn {
+        font-size: 16px;
+        height: 37px;
+        width: 37px;
     }
     .font-input {
         width: 35%;
