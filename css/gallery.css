@@ -61,7 +61,7 @@
 .imgs-container {
     text-align: center;
     overflow-y: scroll;
-    height: 69vh;
+    height: 72vh;
     padding: 10px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .imgs-container img {
-    height: 200px;
+    height: 250px;
     padding: 10px;
     border-radius: 20px;
 }
@@ -104,12 +104,16 @@
     .gallery-container button {
         width: 13%;
     }
+    .imgs-container img {
+        height: 170px;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .imgs-container {
-        height: 55vh;
+        height: 60vh;
         padding: unset;
+        padding-top: 10px;
     }
     .imgs-container img {
         height: 135px;
@@ -134,5 +138,17 @@
         font-size: 11px;
         height: 30px;
         width: 45px;
+    }
+}
+
+@media (max-width: 330px) {
+    .imgs-container {
+        height: 49vh;
+    }
+    .imgs-container img {
+        height: 115px;
+    }
+    .filter-imgs > * {
+        font-size: 6px;
     }
 }
