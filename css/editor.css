@@ -287,6 +287,11 @@
     .font-input {
         width: 35%;
     }
+    .stroke-container,
+    .palette-container {
+        height: 37px;
+        width: 37px;
+    }
     .main-btns .fa-long-arrow-alt-down,
     .main-btns .fa-long-arrow-alt-up {
         width: 38px;
