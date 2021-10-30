@@ -99,6 +99,7 @@
     height: 45px;
     border-radius: 10px;
     box-shadow: 2px 2px 0 #dbdbdb;
+    background-color: white;
 }
 
 .txt-btns .increase::after {
