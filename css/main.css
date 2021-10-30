@@ -144,7 +144,7 @@ body.menu-open .main-screen {
         top: 0;
         right: 0;
         height: 100vh;
-        z-index: 1;
+        z-index: 4;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.7);
         width: 200px;
