@@ -114,7 +114,7 @@
 
 @media (max-width: 650px) {
     .imgs-container {
-        height: 60vh;
+        height: 56vh;
         padding: unset;
         padding-top: 10px;
     }
