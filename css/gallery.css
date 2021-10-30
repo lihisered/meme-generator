@@ -108,7 +108,8 @@
 
 @media (max-width: 600px) {
     .imgs-container {
-        padding-top: 10px;
+        height: 55vh;
+        padding: unset;
     }
     .imgs-container img {
         height: 135px;
@@ -128,7 +129,6 @@
     }
     .gallery-container {
         margin: 10px;
-        height: 55vh;
     }
     .gallery-container button {
         font-size: 11px;
