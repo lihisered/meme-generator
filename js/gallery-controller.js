@@ -20,6 +20,6 @@ function renderGallery() {
     document.querySelector('.editor-container').style.display = 'none';
 }
 
-function toggleMenu() {
+function onToggleMenu() {
     document.body.classList.toggle('menu-open');
 }
