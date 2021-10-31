@@ -7,7 +7,7 @@ var gStartPos;
 const gTouchEvs = ['touchstart', 'touchmove', 'touchend'];
 
 function onCreateMeme(imgId) {
-    initCanvas();
+    initEditor();
     createMeme(imgId);
 
     document.querySelector('.memes-container').style.display = 'none';
@@ -23,7 +23,9 @@ function onCreateMeme(imgId) {
     renderCanvas();
 }
 
-function initCanvas() {
+function initEditor() {
+    document.querySelector('.txt-input').value = '';
+
     gElCanvas = document.querySelector('.canvas');
     gCtx = gElCanvas.getContext('2d');
 }
@@ -65,6 +67,7 @@ function drawImg(imgId) {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
 
         meme.lines.forEach((line, idx) => {
+            // var txtWidth = line.txtWidth;
             line.txtWidth = gCtx.measureText(line.txt).width;
             var txt = line.txt;
             var font = line.font;
@@ -77,9 +80,9 @@ function drawImg(imgId) {
 
             // FIX!
             var startX = line.pos.x - 30;
-            var startY = line.pos.y - 50;
+            var startY = line.pos.y - 60;
             var endX = line.txtWidth + 60;
-            var endY = line.size + 50;
+            var endY = line.size + 60;
             var rectStroke = idx === meme.selectedLineIdx ? 'white' : 'black';
             drawRect(startX, startY, endX, endY, rectStroke);
         });
