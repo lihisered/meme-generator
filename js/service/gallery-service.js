@@ -2,36 +2,53 @@
 console.log('Gallery service');
 
 var gImgs = [];
-var gKeywords;
+var gKeywords = ['Funny', 'Animal', 'Men', 'Smile', 'Comic', 'Cute'];
+var gNextId = 1;
+var gFilterBy = 'All';
 
 createImgs();
 
-function createImg(id, keywords = 'happy') {
+function createImg(id, keywords) {
     var img = { id, url: `img/${id}.jpg`, keywords };
     gImgs.push(img);
 }
 
 function createImgs() {
-    createImg(1, 'Men');
-    createImg(2, 'Animal');
-    createImg(3, 'Animal');
-    createImg(4, 'Animal');
-    createImg(5, 'Funny');
-    createImg(6, 'Men');
-    createImg(7, 'Funny');
-    createImg(8, 'Men');
-    createImg(9, 'Funny');
-    createImg(10, 'Men');
-    createImg(11, 'Men');
-    createImg(12, 'Men');
-    createImg(13, 'Men');
-    createImg(14, 'Men');
-    createImg(15, 'Men');
-    createImg(16, 'Men');
-    createImg(17, 'Men');
-    createImg(18, 'Funny');
+    createImg(gNextId++, ['Men', 'Funny']);
+    createImg(gNextId++, ['Animal', 'Cute']);
+    createImg(gNextId++, ['Animal', 'Cute']);
+    createImg(gNextId++, ['Animal', 'Cute']);
+    createImg(gNextId++, ['Funny', 'Cute']);
+    createImg(gNextId++, ['Men', 'Comic', 'Smile']);
+    createImg(gNextId++, ['Funny', 'Comic']);
+    createImg(gNextId++, ['Men', 'Comic', 'Smile']);
+    createImg(gNextId++, ['Funny', 'Cute', 'Smile']);
+    createImg(gNextId++, ['Men', 'Comic', 'Smile']);
+    createImg(gNextId++, ['Men']);
+    createImg(gNextId++, ['Men', 'Comic']);
+    createImg(gNextId++, ['Men']);
+    createImg(gNextId++, ['Men', 'Funny']);
+    createImg(gNextId++, ['Men', 'Funny']);
+    createImg(gNextId++, ['Men']);
+    createImg(gNextId++, ['Men']);
+    createImg(gNextId++, ['Funny']);
+}
+
+function getImgsForDisplay() {
+    if (gFilterBy === 'All' || gFilterBy === '') return gImgs;
+    return gImgs.filter((img) => {
+        return img.keywords.includes(gFilterBy);
+    });
+}
+
+function setFilter(filterby) {
+    gFilterBy = filterby;
 }
 
 function getImgs() {
     return gImgs;
+}
+
+function getKeywords() {
+    return gKeywords;
 }

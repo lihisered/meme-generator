@@ -15,6 +15,8 @@ function onCreateMeme(imgId) {
     var elContainer = document.querySelector('.editor-container');
     elContainer.style.display = 'flex';
 
+    document.querySelector('.txt-input').value = '';
+
     renderCanvas();
     addListeners();
     renderCanvas();
@@ -180,7 +182,7 @@ function onDown(ev) {
     if (!isTxtClicked(pos)) return;
     setTxtDrag(true);
     gStartPos = pos;
-    document.body.style.cursor = 'grabbing';
+    document.querySelector('.canvas').style.cursor = 'grabbing';
 }
 
 function onMove(ev) {
@@ -197,7 +199,7 @@ function onMove(ev) {
 
 function onUp() {
     setTxtDrag(false);
-    document.body.style.cursor = 'grab';
+    document.querySelector('.canvas').style.cursor = 'grab';
 }
 
 function getEvPos(ev) {
@@ -214,4 +216,21 @@ function getEvPos(ev) {
         };
     }
     return pos;
+}
+
+//
+
+function onSaveMeme() {
+    if (confirm('Saving meme would prevent you continue editing in future. To continue?')) {
+        const imgContent = JSON.stringify(gElCanvas.toDataURL('image/png'));
+        saveMemeToStorage(imgContent);
+        quitEditMeme();
+    }
+}
+
+function discardChanges() {
+    gImg = null;
+    clearInputText();
+    clearCanvas();
+    deleteMeme();
 }

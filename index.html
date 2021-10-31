@@ -25,15 +25,9 @@
 
         <main>
             <div class="gallery-container">
-                <input class="search-input" type="text" placeholder="Search" />
-                <div class="filter-imgs">
-                    <span onclick="changeFontSize(this)">Funny</span>
-                    <span>Animal</span>
-                    <span>Men</span>
-                    <span>Women</span>
-                    <span>Comic</span>
-                    <span>Smile</span>
-                </div>
+                <input list="search" oninput="onSetFilter(event.target.value)" class="search-input" type="text" placeholder="Search" />
+                <datalist id="search" class="search-datalist"></datalist>
+                <div class="filter-imgs"></div>
                 <button>More</button>
                 <div class="imgs-container"></div>
             </div>

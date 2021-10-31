@@ -126,7 +126,7 @@
         margin-top: 5%;
     }
     .filter-imgs > * {
-        font-size: 9px;
+        font-size: 14px;
         padding: unset;
     }
     .filter-imgs > *:nth-of-type(2),
@@ -141,6 +141,12 @@
         font-size: 11px;
         height: 30px;
         width: 45px;
+    }
+}
+
+@media (max-width: 450px) {
+    .filter-imgs > * {
+        font-size: 9px;
     }
 }
 

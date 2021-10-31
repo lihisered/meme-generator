@@ -56,19 +56,16 @@ function addLine(font = 'Impact') {
 }
 
 function switchLine() {
-    if (gMeme.lines.length === 1) return;
-    else if ((gMeme.lines.length === 2 && gMeme.selectedLineIdx === 1) || gMeme.selectedLineIdx === 2 || gMeme.lines.length === 0)
-        gMeme.selectedLineIdx = 0;
-    else if (gMeme.lines.length === 2 && gMeme.selectedLineIdx === 0) gMeme.selectedLineIdx = 1;
-    else gMeme.selectedLineIdx++;
+    if (gMeme.lines.length === 1) gMeme.selectedLineIdx = 0;
+    else gMeme.selectedLineIdx = gMeme.lines.length - 1 === gMeme.selectedLineIdx ? 0 : gMeme.selectedLineIdx + 1;
 
     var elInput = document.querySelector('.txt-input');
-    elInput.value = gMeme.lines.length > 1 ? gMeme.lines[gMeme.selectedLineIdx].txt : '';
+    elInput.value = gMeme.lines.length >= 1 ? gMeme.lines[gMeme.selectedLineIdx].txt : '';
 }
 
 function removeLine() {
     gMeme.lines.splice(gMeme.selectedLineIdx, 1);
-    if (gMeme.lines.length === 1) gMeme.selectedLineIdx = 0;
+    switchLine();
 }
 
 function changeTxtFill(color) {
