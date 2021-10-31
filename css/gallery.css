@@ -93,7 +93,7 @@
 }
 
 .memes-container {
-    height: 85vh;
+    height: 84vh;
     margin: 15px;
     border-radius: 10px;
     text-align: center;
@@ -116,6 +116,9 @@
         margin-left: 3%;
         margin-top: 2%;
     }
+    .imgs-container {
+        height: 60vh;
+    }
     .gallery-container button {
         width: 13%;
     }
@@ -123,7 +126,7 @@
 
 @media (max-width: 650px) {
     .imgs-container {
-        height: 56vh;
+        height: 58vh;
         padding: unset;
         padding-top: 10px;
     }
@@ -151,11 +154,23 @@
         height: 30px;
         width: 45px;
     }
+    .memes-container {
+        height: 82vh;
+    }
+    .memes-container img {
+        height: 200px;
+    }
 }
 
 @media (max-width: 450px) {
     .filter-imgs > * {
         font-size: 9px;
+    }
+    .memes-container {
+        height: 81vh;
+    }
+    .memes-container img {
+        height: 135px;
     }
 }
 

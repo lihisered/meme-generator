@@ -35,7 +35,6 @@ function renderCanvas() {
 
 function renderSavedMemes() {
     const memes = getMemes();
-    console.log(memes);
 
     const strHtmls = memes.map((meme, idx) => {
         return `<img src="${JSON.parse(meme.url)}" onclick="onRemoveMeme('${idx}')">`;
@@ -157,10 +156,6 @@ function onChangeFont(elInput) {
     changeFont(font);
     renderCanvas();
 }
-
-// function onSaveMeme() {
-//     saveMeme();
-// }
 
 function downloadImg() {
     var elLink = document.querySelector('.download-link');
