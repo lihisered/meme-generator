@@ -59,8 +59,8 @@
 }
 
 .imgs-container {
-    text-align: center;
     overflow-y: scroll;
+    text-align: center;
     height: 69vh;
     padding: 10px;
 }
@@ -81,7 +81,8 @@
     background: linear-gradient(#33be6d, #0c98b9);
 }
 
-.imgs-container img {
+.imgs-container img,
+.memes-container img {
     height: 230px;
     padding: 10px;
     border-radius: 20px;
@@ -89,6 +90,14 @@
 
 .gallery-container img:hover {
     cursor: pointer;
+}
+
+.memes-container {
+    height: 85vh;
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #383b42;
 }
 
 @media (max-width: 1150px) {

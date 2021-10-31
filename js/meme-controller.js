@@ -10,6 +10,7 @@ function onCreateMeme(imgId) {
     initCanvas();
     createMeme(imgId);
 
+    document.querySelector('.memes-container').style.display = 'none';
     document.querySelector('.gallery-container').style.display = 'none';
 
     var elContainer = document.querySelector('.editor-container');
@@ -32,7 +33,23 @@ function renderCanvas() {
     drawImg(meme.selectedImgId);
 }
 
-function drawText(text, font = 'Impact', size, color, stroke, x, y) {
+function renderSavedMemes() {
+    const memes = getMemes();
+    console.log(memes);
+
+    const strHtmls = memes.map((meme, idx) => {
+        return `<img src="${JSON.parse(meme.url)}" onclick="onRemoveMeme('${idx}')">`;
+    });
+
+    document.querySelector('.gallery-container').style.display = 'none';
+    document.querySelector('.editor-container').style.display = 'none';
+
+    const elContainer = document.querySelector('.memes-container');
+    elContainer.style.display = 'block';
+    elContainer.innerHTML = strHtmls.join('');
+}
+
+function drawTxt(text, font = 'Impact', size, color, stroke, x, y) {
     gCtx.lineWidth = 1;
     gCtx.fillStyle = color;
     gCtx.strokeStyle = stroke;
@@ -57,7 +74,7 @@ function drawImg(imgId) {
             var stroke = line.stroke;
             var x = line.pos.x;
             var y = line.pos.y;
-            drawText(txt, font, size, color, stroke, x, y);
+            drawTxt(txt, font, size, color, stroke, x, y);
 
             // FIX!
             var startX = line.pos.x - 30;
@@ -141,9 +158,9 @@ function onChangeFont(elInput) {
     renderCanvas();
 }
 
-function onSaveMeme() {
-    saveMeme();
-}
+// function onSaveMeme() {
+//     saveMeme();
+// }
 
 function downloadImg() {
     var elLink = document.querySelector('.download-link');
@@ -218,19 +235,12 @@ function getEvPos(ev) {
     return pos;
 }
 
-//
-
 function onSaveMeme() {
-    if (confirm('Saving meme would prevent you continue editing in future. To continue?')) {
-        const imgContent = JSON.stringify(gElCanvas.toDataURL('image/png'));
-        saveMemeToStorage(imgContent);
-        quitEditMeme();
-    }
+    const imgUrl = JSON.stringify(gElCanvas.toDataURL('image/png'));
+    saveMeme(imgUrl);
 }
 
-function discardChanges() {
-    gImg = null;
-    clearInputText();
-    clearCanvas();
-    deleteMeme();
+function onRemoveMeme(memeId) {
+    removeMeme(memeId);
+    renderSavedMemes();
 }

@@ -1,7 +1,7 @@
 'use strict';
 console.log('Meme service');
 
-const KEY = 'memeDB';
+const KEY = 'memesDB';
 var gMeme;
 var gMemes = [];
 
@@ -102,19 +102,21 @@ function moveMeme(dx, dy) {
     gMeme.lines[gMeme.selectedLineIdx].pos.y += dy;
 }
 
-function saveMeme() {
-    gMemes.push(gMeme);
-    saveToStorage('memesDB', gMemes);
-}
-
 function getMeme() {
     return gMeme;
 }
 
-function getMemes() {
-    return loadFromStorage('memesDB');
+function removeMeme(memeId) {
+    gMemes.splice(memeId, 1);
+    saveToStorage(KEY, gMemes);
 }
 
-function saveMemeToStorage() {
-    saveToStorage(KEY, gMeme);
+function saveMeme(imgUrl) {
+    gMemes.push({ meme: gMeme, url: imgUrl });
+    saveToStorage(KEY, gMemes);
+}
+
+function getMemes() {
+    gMemes = loadFromStorage('memesDB');
+    return gMemes;
 }
